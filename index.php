@@ -18,6 +18,7 @@
       $GLOBALS['database'] = new Database();
     } catch (PDOException $e) {
       echo $e->getmessage();
+      exit;
     }
     
     if (isset($argv[1])) { // if csv file location exists in arguments, we start importing it.
